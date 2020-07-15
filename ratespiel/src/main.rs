@@ -11,4 +11,12 @@ fn main() {
     .expect("Failed to read line");
 
     println!("You guessed: {}", guess);
+
+    //Generate a secret number to compare to
+
+    //Comparing the secret number to the guessed Number
+
+    //Allowing for multiple guesses with looping
+
+    //Exiting after correct guess
 }
