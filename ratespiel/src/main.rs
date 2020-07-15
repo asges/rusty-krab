@@ -3,7 +3,9 @@ use std::io;
 fn main() {
     println!("Welcome to 'Guess the Number'!");
 
-    println!("Please input a number.");
+    //Specify a number between 1 and 100 because as of 15/7/2020, std lib doesn't have a
+    // random number generator yet. Library crate exists though
+    println!("Please input a number between 1 and 100.");
 
     let mut guess = String::new();
 
@@ -13,6 +15,7 @@ fn main() {
     println!("You guessed: {}", guess);
 
     //Generate a secret number to compare to
+
 
     //Comparing the secret number to the guessed Number
 
