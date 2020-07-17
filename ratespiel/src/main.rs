@@ -1,4 +1,5 @@
 use std::io;
+use std:comp::Ordering;
 use rand::Rng; //trait that defines methods which random number generators implement
 
 fn main() {
@@ -18,11 +19,11 @@ fn main() {
 
     println!("You guessed: {}", guess);
 
-    //Generate a secret number to compare to
-
-
-    //Comparing the secret number to the guessed Number
-
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!");
+        Ordering::Greater => println!("TOo big!");
+        Ordering::Equal => println!("You win!");
+    }
     //Allowing for multiple guesses with looping
 
     //Exiting after correct guess
