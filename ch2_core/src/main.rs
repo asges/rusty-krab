@@ -19,16 +19,29 @@ fn main(){
    
 
     for (index, tup) in _twelve_days.iter().enumerate() { //returns (usize, &(&str, &str))
-        println!("On the {} day of Christmas, my true love gave to me", tup.0);
-    
-        println!("{}", tup.1);
-
-        for i in (0..index).rev() {
+        println!("On the {} day of Christmas, my true love gave to me:", tup.0);
+        if index == 0 {
+            println!("{}.", tup.1);
+            println!("\u{000a}");
+        } else {
+            println!("{},", tup.1);
+        }
+        for i in (0..index).rev() {   
             let tup = &_twelve_days[i]; //uses the concept of shadowing
-            println!("{}", tup.1);
+            if i == 0 {
+                //let lower_cased = lower_case_first_letter(&tup.1);
+                println!("and {}.", tup.1);
+                println!("\u{000a}");
+            } else {
+                println!("{},", tup.1);
+            }
+            
 
         }
         
     }
 
 }
+
+//fn lower_case_first_letter(s: &str) -> String {
+//}
